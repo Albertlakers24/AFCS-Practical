@@ -39,7 +39,7 @@ fi_flag_Simulink = 1;
 
 %% Find the state space model for the hifi model at the desired alt and vel.
 trim_state_lin = trim_state_hi; trim_thrust_lin = trim_thrust_hi; trim_control_lin = trim_control_hi;
-operating_point = operpoint('LIN_F16Block'); % retrieves initial conditions from integrators
+operating_point = operpoint('LIN_F16Block.slx'); % retrieves initial conditions from integrators
 operating_point.Inputs(1).u = trim_thrust_lin; operating_point.Inputs(2).u = trim_control_lin(1);
 operating_point.Inputs(3).u = trim_control_lin(2); operating_point.Inputs(4).u = trim_control_lin(3);
 
